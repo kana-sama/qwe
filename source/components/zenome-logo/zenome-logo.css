@@ -1,0 +1,26 @@
+.logo {
+  color: var(--theme-primary);
+  font-size: 42px;
+  line-height: 1;
+  margin: 0;
+  min-width: 200px;
+}
+
+.logo:before {
+  content: '\e80b';
+
+  font-family: fontello;
+  font-style: normal;
+  font-weight: 400;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+}

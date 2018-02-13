@@ -1,13 +1,4 @@
 .root {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  @media (--desktop) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 }
 
 .left {
@@ -38,4 +29,24 @@
 
 .right {
   order: 1;
+}
+
+.top {
+  display: flex;
+}
+
+.top-spacer {
+  width: 100%;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (--desktop) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }

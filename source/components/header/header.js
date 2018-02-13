@@ -7,6 +7,7 @@ import Panel from '@daonomic/ui/source/panel';
 import Translation from '~/components/translation';
 import Navigation from '~/components/navigation';
 import Burger from '~/components/burger';
+import ZenomeLogo from '~/components/zenome-logo';
 import pages from '~/pages';
 import styles from './header.css';
 
@@ -82,25 +83,27 @@ export default class Header extends Component {
 
     return (
       <Panel className={cn(className, styles.root)}>
-        <div className={styles.left}>
-          <Burger
-            isActive={isNavigationExpanded}
-            onClick={this.handleToggleNavigation}
-          />
-        </div>
-
-        <div
-          className={cn(styles.navigation, {
-            [styles.navigation_expanded]: isNavigationExpanded,
-          })}
-        >
-          {this.renderNavigation()}
-        </div>
-
-        <div className={styles.right}>
+        <div className={styles.top}>
+          <div className={styles.left}>
+            <Burger
+              isActive={isNavigationExpanded}
+              onClick={this.handleToggleNavigation}
+            />
+          </div>
+          <ZenomeLogo />
+          <div className={styles['top-spacer']} />
           <Button onClick={this.handleClickLogout} size="small">
             <Translation id="auth:logout" />
           </Button>
+        </div>
+        <div className={styles.bottom}>
+          <div
+            className={cn(styles.navigation, {
+              [styles.navigation_expanded]: isNavigationExpanded,
+            })}
+          >
+            {this.renderNavigation()}
+          </div>
         </div>
       </Panel>
     );

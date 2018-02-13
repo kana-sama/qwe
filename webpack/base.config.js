@@ -71,6 +71,10 @@ const config = {
           mimetype: 'image/jpg',
         },
       },
+      {
+        test: /\.(eot|woff2?|ttf)$/,
+        loader: 'file-loader',
+      },
     ],
   },
 
