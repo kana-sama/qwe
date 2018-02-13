@@ -1,14 +1,6 @@
 .root {
 }
 
-.left {
-  order: 1;
-
-  @media (--desktop) {
-    display: none;
-  }
-}
-
 .navigation {
   order: 2;
   flex: 1 1 100%;
@@ -27,16 +19,36 @@
   display: block;
 }
 
-.right {
-  order: 1;
-}
-
 .top {
   display: flex;
 }
 
-.top-spacer {
+.left {
+  order: 0;
+
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+
+  @media (--desktop) {
+    display: none;
+  }
+}
+
+.middle {
   width: 100%;
+}
+
+.middleInner {
+  display: none;
+
+  @media (--tablet) {
+    display: flex;
+  }
+}
+
+.right {
+  order: 1;
 }
 
 .bottom {

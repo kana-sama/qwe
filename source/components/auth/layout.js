@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import Page from '@daonomic/ui/source/page';
+import ZenomeLogo from '~/components/zenome-logo';
 import Footer from '~/components/footer';
 import styles from './layout.css';
 
@@ -19,6 +20,12 @@ export default class Layout extends PureComponent {
 
     return (
       <Page>
+        <Page.Header>
+          <div className={cn(styles.container, styles.content)}>
+            <ZenomeLogo />
+          </div>
+        </Page.Header>
+
         <Page.Content>
           <div className={cn(styles.container, styles.content)}>
             {children}

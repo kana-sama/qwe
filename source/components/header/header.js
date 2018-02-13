@@ -90,11 +90,16 @@ export default class Header extends Component {
               onClick={this.handleToggleNavigation}
             />
           </div>
-          <ZenomeLogo />
-          <div className={styles['top-spacer']} />
-          <Button onClick={this.handleClickLogout} size="small">
-            <Translation id="auth:logout" />
-          </Button>
+          <div className={styles.middle}>
+            <div className={styles.middleInner}>
+              <ZenomeLogo />
+            </div>
+          </div>
+          <div className={styles.right}>
+            <Button onClick={this.handleClickLogout} size="small">
+              <Translation id="auth:logout" />
+            </Button>
+          </div>
         </div>
         <div className={styles.bottom}>
           <div
